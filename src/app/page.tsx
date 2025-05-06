@@ -10,7 +10,7 @@ export default function HomePage() {
       </header>
 
       {/* Main content */}
-      <main className="flex-1 flex flex-col items-center justify-center px-4 py-12">
+      <main className="flex-1 flex flex-col items-center justify-center px-4 ">
         <div className="max-w-4xl w-full mx-auto text-center space-y-12">
           {/* Hero section with animated background element */}
           <div className="relative">

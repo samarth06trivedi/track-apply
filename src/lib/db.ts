@@ -1,7 +1,10 @@
-//lib/db.ts
-import monk from 'monk';
+// lib/db.ts
+
+import monk from "monk";
 
 const db = monk(process.env.MONGO_URI!);
-const users = db.get('users'); // assuming your collection is called 'users'
+const users = db.get("users");
+const jobApplications = db.get("job_applications");
 
-export default users;
+
+export { users, jobApplications };

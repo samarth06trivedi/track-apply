@@ -1,7 +1,7 @@
 // app/api/register/route.ts
 import { NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
-import users from '@/lib/db';
+import { users } from '@/lib/db';
 
 export async function POST(req: Request) {
   const { name, email, password } = await req.json();
