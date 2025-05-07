@@ -2,9 +2,9 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { NextAuthOptions } from "next-auth";
 import { users } from "@/lib/db";
 import bcrypt from "bcryptjs";
+import { NextAuthOptions } from "next-auth";
 
 const authOptions: NextAuthOptions = {
   providers: [
@@ -55,5 +55,6 @@ const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
+// ✅ Only export the NextAuth handler
 const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST }; 
+export { handler as GET, handler as POST };
